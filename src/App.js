@@ -2,10 +2,6 @@
      extend: 'Rally.app.App',
      componentCls: 'app',
      launch: function(){
-        this._makeStore();
-     },
-     _makeStore:function(){
-      
         var filter = Ext.create('Rally.data.QueryFilter', {
                                 property: 'Severity',
                                 operator: '=',
