@@ -2,6 +2,7 @@
      extend: 'Rally.app.App',
      componentCls: 'app',
      launch: function(){
+        /*
         var filter = Ext.create('Rally.data.QueryFilter', {
                                 property: 'Severity',
                                 operator: '=',
@@ -24,13 +25,15 @@
                                 value: 'Cosmetic'  
                             });
                             filter.toString();
+                            */
                             
         this._myStore = Ext.create('Rally.data.WsapiDataStore', {
            model: 'Defect',
            fetch: true,
            autoLoad: true,
-            filters: [filter],
-           listeners: {
+           //filters: [filter],
+            
+            listeners: {
                             load: this._onDataLoaded,
                             scope: this
             }
